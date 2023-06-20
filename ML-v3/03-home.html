@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+        <meta name="description" content="Expleo ML">
+        <meta name="keywords" content="Expelo ML">
+        <meta name="author" content="ncrypted">
+        <title>Expleo - Machine Learning</title>
+        <link rel="icon" href="images/favicon-1.png" sizes="192x192">
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+		<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+		<!-- <link rel="stylesheet" href="css/style.css"> -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="css/fonts/fonts.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="js/jquery.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <a class="logo-section" href="javascript:void(0);" title="expleo machine learnig">
+                <img src="/images/expleo-ml-logo-v1.svg" alt="expleo" />
+            </a>
+            <ul>
+                <li><a href="#home">About us</a></li>
+                <li><a href="#news">Products</a></li>
+                <li><a href="#contact">Pre-Assessment</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about" class="action-url" data-href="01-index.html"><span class="login-action">Logout</span></a></li>
+            </ul>
+        </header>
+        <main class="home-pg">  
+            <div class="ml-file-upload">
+                <div class="content-wrapper">
+                    <div class="upload-btn-wrapper">
+                        <button class="btn" id="OpenImgUpload">
+                            <img src="/images/md-icon-upload.svg" alt="">
+                            <span class="ml-fp-support-label-1">
+                                Drag and drop file here or <span>browse</span> to choose file
+                            </span>
+                            <span class="ml-fp-support-label-2">
+                                Supports: CSV, XLS
+                            </span>
+                        </button>
+                        <input type="file" name="myfile" id="imgupload" />
+                    </div>
+                </div>				
+            </div>
+        </main>
+        <footer>
+            <div class="copyright">
+                <div class="container">
+                    <span>Copyright © Expleo 2023</span>
+                </div>
+            </div>
+        </footer>
+        <script type='text/javascript'>
+            jQuery(document).ready(function($) {
+              $("#OpenImgUpload").click(function(){ $("#imgupload").trigger('click'); });
+            });
+        </script>
+        <script type='text/javascript'>
+            jQuery(document).ready(function($) {
+                $('#imgupload').change(function() {
+                    var filename = $('#imgupload').val();
+                    if (filename.substring(3,11) == 'fakepath') {
+                        filename = filename.substring(12);
+                    } // For Remove fakepath
+                    $("label[for='file_name'] b").html(filename);
+                    $("label[for='file_default']").text('Selected File: ');
+                    if (filename == "") {
+                        $("label[for='file_default']").text('No File Choosen');
+                    }
+                });
+            });
+        </script>
+        <script type='text/javascript'>
+            jQuery(document).ready(function($) {
+                $('#imgupload').change(function() {
+                    window.location = "04-loader.html";
+                });
+            });
+        </script>
+        <script type='text/javascript'>
+            jQuery(document).ready(function($) {
+                $(".action-url").click(function() {
+                    window.location = $(this).data("href");
+                });
+            });
+        </script>
+    </body>
+</html>

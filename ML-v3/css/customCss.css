@@ -1,0 +1,67 @@
+div .div2{
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  /* Styles for the headings */
+  h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-left: 300px;
+    
+  }
+
+  /* Styles for the paragraphs */
+  p {
+    font-size: 14px;
+    color: #947474;
+    margin-left: 300px;
+    margin-right: 300px;
+  }
+
+  /* Styles for the navigation links */
+  .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 5px 10px;
+      margin-right: 10px;
+  }
+
+  /* Hover effect styles */
+  .navbar a:hover {
+      background-color: #555;
+  }
+
+   /* Styles for the dropdown menu */
+   .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }

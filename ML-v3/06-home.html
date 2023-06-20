@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Expleo - Machine Learning</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="css/fonts/fonts.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/favicon-1.png" sizes="192x192">
+  </head>
+  <body>
+		<header id="navbar-1">
+      <a class="logo-section" href="javascript:void(0);" title="expleo machine learnig">
+          <img src="images/expleo-ml-logo-v1.svg" alt="expleo" />
+      </a>
+      <ul>
+          <li><a href="#home">About us</a></li>
+          <li><a href="#news">Products</a></li>
+          <li><a href="#contact">Pre-Assessment</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about" class="action-url" data-href="01-index.html"><span class="login-action">Logout</span></a></li>
+      </ul>
+  </header>
+		<div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar">
+				<div class="p-4 pt-2">
+	        <ul class="list-unstyled components mb-5">
+	          <li>
+	            <a class="tablinks active" href="javascript:void(0);" onclick="openCity(event, 'preview-data')">
+                <img src="images/sm-icon-pd.svg" alt="preview data">
+                Preview Data
+              </a>
+	          </li>
+	          <li>
+	              <a class="tablinks" href="javascript:void(0);" onclick="openCity(event, 'data-info')">
+                  <img src="images/sm-icon-di.svg" alt="Data Info" />
+                  Data info
+                </a>
+	          </li>
+	          <li>
+              <a class="tablinks" href="javascript:void(0);" onclick="openCity(event, 'describe-data')">
+                <img src="images/sm-icon-dd.svg" alt="Describe Data" />
+                Describe Data
+              </a>
+	          </li>
+	          <li>
+              <a class="tablinks" href="javascript:void(0);" onclick="openCity(event, 'data-correlation')">
+                <img src="images/sm-icon-correlation.svg" alt="Describe Data" />
+                Data Correlation
+              </a>
+	          </li>
+            <li>
+              <a href="#datavisualization" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle tablinks"  onclick="openCity(event, 'data-visualization')">
+                <img src="images/sm-icon-dv-w.svg" alt="Describe Data" />
+                Data Visualization
+              </a>
+              <ul class="collapse list-unstyled" id="datavisualization">
+                <li>
+                    <a class="tablinks" href="#" onclick="openCity(event, 'data-boxplot')">Boxplot</a>
+                </li>
+                <li>
+                    <a class="tablinks" href="#" onclick="openCity(event, 'data-histogram')">Histogram</a>
+                </li>
+                <li>
+                    <a class="tablinks" href="#" onclick="openCity(event, 'data-pairolot')">Pairolot</a>
+                </li>
+              </ul>
+	          </li>
+            <li>
+              <a  href="#dataprofiling" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle tablinks" onclick="openCity(event, 'data-profiling')">
+                <img src="images/sm-icon-dp.svg" alt="Describe Data" />
+                Data Profiling
+              </a>
+              <ul class="collapse list-unstyled" id="dataprofiling">
+                <li>
+                    <a class="tablinks" href="#" onclick="openCity(event, 'data-profiling-overview')">Overview</a>
+                </li>
+                <li>
+                    <a href="#">Alerts (6)</a>
+                </li>
+                <li>
+                    <a href="#">Reproduction</a>
+                </li>
+              </ul>
+	          </li>
+            <li>
+              <a  href="#dataunderstanding" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle tablinks" onclick="openCity(event, 'data-understanding')">
+                <img src="images/sm-icon-du.svg" alt="Describe Data" />
+                Data Understanding
+              </a>
+              <ul class="collapse list-unstyled" id="dataunderstanding">
+                <li>
+                    <a href="#">Overview</a>
+                </li>
+                <li>
+                    <a href="#">Alerts (6)</a>
+                </li>
+                <li>
+                    <a href="#">Reproduction</a>
+                </li>
+              </ul>
+	          </li>
+	          <li>
+              <a class="tablinks" href="javascript:void(0);" onclick="openCity(event, 'train-model')">
+                <img src="images/sm-icon-tm.svg" alt="Describe Data" />
+                Train Model
+              </a>
+	          </li>
+	        </ul>
+
+	      </div>
+    	</nav>
+
+        <!-- Page Content  -->
+      <main id="content" class="home-container">
+          <div class="wrapper">
+                <div class="ml-tab-section">
+                    <div id="preview-data" class="tabcontent" style="display: block;">
+                        <h3>Preview Data</h3>
+                        <div class="table-container">
+                            <ul class="responsive-table">
+                              <li class="table-header">
+                                <div class="col col-1">s.no</div>
+                                <div class="col col-2">sepal_length</div>
+                                <div class="col col-3">sepal _width</div>
+                                <div class="col col-4">petal_length</div>
+                                <div class="col col-5">petal width</div>
+                                <div class="col col-6">species</div>
+                              </li>
+                              <li class="table-row">
+                                <div class="col col-1">1</div>
+                                <div class="col col-2">5.1</div>
+                                <div class="col col-3">3.5</div>
+                                <div class="col col-4">1.4</div>
+                                <div class="col col-5">0.2</div>
+                                <div class="col col-6">Iris-setosa</div>
+                              </li>
+                              <li class="table-row">
+                                <div class="col col-1">2</div>
+                                <div class="col col-2" >4.9</div>
+                                <div class="col col-3">3.0</div>
+                                <div class="col col-4">1.4</div>
+                                <div class="col col-5">0.2</div>
+                                <div class="col col-6">Iris-setosa</div>
+                              </li>
+                              <li class="table-row">
+                                <div class="col col-1">3</div>
+                                <div class="col col-2" >4.7</div>
+                                <div class="col col-3">3.2</div>
+                                <div class="col col-4">1.3</div>
+                                <div class="col col-5">0.2</div>
+                                <div class="col col-6">Iris-setosa</div>
+                              </li>
+                              <li class="table-row">
+                                <div class="col col-1">4</div>
+                                <div class="col col-2" >4.6</div>
+                                <div class="col col-3">3.2</div>
+                                <div class="col col-4">1.3</div>
+                                <div class="col col-5">0.2</div>
+                                <div class="col col-6">Iris-setosa</div>
+                              </li>
+                              <li class="table-row">
+                                <div class="col col-1">5</div>
+                                <div class="col col-2" >5.0</div>
+                                <div class="col col-3">3.6</div>
+                                <div class="col col-4">1.4</div>
+                                <div class="col col-5">0.2</div>
+                                <div class="col col-6">Iris-setosa</div>
+                              </li>
+                              
+                            </ul>
+                        </div>
+                        <div class="table-pagination-container">
+                            <div class="pagination-pg-info">
+                                Page 1 of 10
+                            </div>
+                            <div class="center">
+                                <div class="pagination">
+                                    <a href="#">&laquo;</a>
+                                    <a href="#" class="active">1</a>
+                                    <a href="#">2</a>
+                                    <a href="#">3</a>
+                                    <a href="#">4</a>
+                                    <a href="#">5</a>
+                                    <a href="#">6</a>
+                                    <a href="#">&raquo;</a>
+                                </div>
+                            </div>
+                            <div class="pagination">
+                                <a href="#">❮ Previous</a>
+                                <a href="#" class="active">Next ❯</a>
+                              </div>
+                        </div>
+                    </div>
+                    <div id="data-info" class="tabcontent">
+                        <h3>Data Info</h3>
+                        <div class="table-container">
+                            <ul class="responsive-table">
+                              <li class="table-header">
+                                <div class="col col-25">Column Name</div>
+                                <div class="col col-25">Data Type</div>
+                                <div class="col col-25">Non-Null Count</div>
+                                <div class="col col-25">Null Count</div>
+                              </li>
+                              <li class="table-row">
+                                <div class="col col-25">sepal_length</div>
+                                <div class="col col-25">float64</div>
+                                <div class="col col-25">150</div>
+                                <div class="col col-25">0</div>
+                              </li>
+                              <li class="table-row">
+                                <div class="col col-25">sepal width</div>
+                                <div class="col col-25" >float64</div>
+                                <div class="col col-25">150</div>
+                                <div class="col col-25">0</div>
+                              </li>
+                              <li class="table-row">
+                                <div class="col col-25">sepal_length</div>
+                                <div class="col col-25" >float64</div>
+                                <div class="col col-25">150</div>
+                                <div class="col col-25">0</div>
+                              </li>
+                              <li class="table-row">
+                                <div class="col col-25">sepal width</div>
+                                <div class="col col-25" >float64</div>
+                                <div class="col col-25">150</div>
+                                <div class="col col-25">0</div>
+                              </li>
+                              <li class="table-row">
+                                <div class="col col-25">species</div>
+                                <div class="col col-25" >obiect</div>
+                                <div class="col col-25">150</div>
+                                <div class="col col-25">0</div>
+                              </li>
+                            </ul>
+                        </div>
+                        <div class="table-container-info">
+                            <ul>
+                                <li>
+                                    <span>Total Rows</span>
+                                    <span>150</span>
+                                </li>
+                                <li>
+                                    <span>Total Columns</span>
+                                    <span>5</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="describe-data" class="tabcontent">
+                        <h3>Describe Data</h3>
+                        <div class="table-container">
+                            <ul class="responsive-table">
+                              <li class="table-header">
+                                <div class="col col-20"></div>
+                                <div class="col col-20">sepal_length</div>
+                                <div class="col col-20">sepal_width</div>
+                                <div class="col col-20">petal_length</div>
+                                <div class="col col-20">petal width</div>
+                              </li>
+                              <li class="table-row">
+                                <div class="col col-20">count</div>
+                                <div class="col col-20" >150.000000</div>
+                                <div class="col col-20">150.000000</div>
+                                <div class="col col-20">150.000000</div>
+                                <div class="col col-20">150.000000</div>
+                              </li>
+                              <li class="table-row">
+                                <div class="col col-20">mean</div>
+                                <div class="col col-20">5.843333</div>
+                                <div class="col col-20">3.054000</div>
+                                <div class="col col-20">3.758667</div>
+                                <div class="col col-20">1.198667</div>
+                              </li>
+                              <li class="table-row">
+                                <div class="col col-20">std</div>
+                                <div class="col col-20">0.828066</div>
+                                <div class="col col-20">0.433594</div>
+                                <div class="col col-20">1.764420</div>
+                                <div class="col col-20">0.763161</div>
+                              </li>
+                              <li class="table-row">
+                                <div class="col col-20">min</div>
+                                <div class="col col-20">4.300000</div>
+                                <div class="col col-20">2.000000</div>
+                                <div class="col col-20">1.000000</div>
+                                <div class="col col-20">0.100000</div>
+                              </li>
+                              <li class="table-row">
+                                <div class="col col-20">25%</div>
+                                <div class="col col-20">5.100000</div>
+                                <div class="col col-20">2.800000</div>
+                                <div class="col col-20">1.600000</div>
+                                <div class="col col-20">0.300000</div>
+                              </li>
+                              <li class="table-row">
+                                <div class="col col-20">50%</div>
+                                <div class="col col-20">5.800000</div>
+                                <div class="col col-20">3.000000</div>
+                                <div class="col col-20">4.350000</div>
+                                <div class="col col-20">1.300000</div>
+                              </li>
+                              <li class="table-row">
+                                <div class="col col-20">75%</div>
+                                <div class="col col-20">6.400000</div>
+                                <div class="col col-20">3.300000</div>
+                                <div class="col col-20">5.100000</div>
+                                <div class="col col-20">1.800000</div>
+                              </li>
+                              <li class="table-row">
+                                <div class="col col-20">max</div>
+                                <div class="col col-20">7.900000</div>
+                                <div class="col col-20">4.400000</div>
+                                <div class="col col-20">6.900000</div>
+                                <div class="col col-20">2.500000</div>
+                              </li>
+                            </ul>
+                        </div>
+                        <div class="table-pagination-container">
+                            <div class="pagination-pg-info">
+                                Page 1 of 10
+                            </div>
+                            <div class="center">
+                                <div class="pagination">
+                                    <a href="#">&laquo;</a>
+                                    <a href="#" class="active">1</a>
+                                    <a href="#">2</a>
+                                    <a href="#">3</a>
+                                    <a href="#">4</a>
+                                    <a href="#">5</a>
+                                    <a href="#">6</a>
+                                    <a href="#">&raquo;</a>
+                                </div>
+                            </div>
+                            <div class="pagination">
+                                <a href="#">❮ Previous</a>
+                                <a href="#" class="active">Next ❯</a>
+                              </div>
+                        </div>
+                    </div>
+                    <div id="data-correlation" class="tabcontent">
+                        <h3>Data Correlation</h3>
+                        <div class="table-container">
+                            <ul class="responsive-table">
+                              <li class="table-header">
+                                <div class="col col-20"></div>
+                                <div class="col col-20">sepal_length</div>
+                                <div class="col col-20">sepal_width</div>
+                                <div class="col col-20">petal_length</div>
+                                <div class="col col-20">petal width</div>
+                              </li>
+                              <li class="table-row">
+                                <div class="col col-20">sepal_length</div>
+                                <div class="col col-20">1.000000</div>
+                                <div class="col col-20">-0.109369</div>
+                                <div class="col col-20">0.871754</div>
+                                <div class="col col-20">0.817954</div>
+                              </li>
+                              <li class="table-row">
+                                <div class="col col-20">sepal_width</div>
+                                <div class="col col-20">-0.109369</div>
+                                <div class="col col-20">1.000000</div>
+                                <div class="col col-20">-0.420516</div>
+                                <div class="col col-20">-0.356544</div>
+                              </li>
+                              <li class="table-row">
+                                <div class="col col-20">petal _length</div>
+                                <div class="col col-20">0.871754</div>
+                                <div class="col col-20">0.420516</div>
+                                <div class="col col-20">1.000000</div>
+                                <div class="col col-20">0.962757</div>
+                              </li>
+                              <li class="table-row">
+                                <div class="col col-20">petal _length</div>
+                                <div class="col col-20">0.817954</div>
+                                <div class="col col-20">-0.356544</div>
+                                <div class="col col-20">0.962757</div>
+                                <div class="col col-20">1.000000</div>
+                              </li>
+                              
+                            </ul>
+                        </div>
+                        <div class="table-container-info">
+                            <div class="data-visualization">
+                                <img src="images/data-correction.png" alt="data-correction" />
+                            </div>
+                        </div>
+                        <!-- <div class="table-pagination-container">
+                            <div class="pagination-pg-info">
+                                Page 1 of 10
+                            </div>
+                            <div class="center">
+                                <div class="pagination">
+                                    <a href="#">&laquo;</a>
+                                    <a href="#" class="active">1</a>
+                                    <a href="#">2</a>
+                                    <a href="#">3</a>
+                                    <a href="#">4</a>
+                                    <a href="#">5</a>
+                                    <a href="#">6</a>
+                                    <a href="#">&raquo;</a>
+                                </div>
+                            </div>
+                            <div class="pagination">
+                                <a href="#">❮ Previous</a>
+                                <a href="#" class="active">Next ❯</a>
+                              </div>
+                        </div> -->
+                    </div>
+                    <div id="data-visualization" class="tabcontent">
+                        <h3>Data Visualization</h3>
+                    </div>
+                    <div id="data-histogram" class="tabcontent">
+                        <h3>Data Histogram</h3>
+                        <div class="table-container">
+                          <img src="images/data-dv.png" alt="Data Visualization"/>
+                        </div>
+                    </div>
+                    <div id="data-profiling" class="tabcontent">
+                        <h3>Data Profiling</h3>
+                    </div>
+                    <div id="data-profiling-overview" class="tabcontent">
+                      <h3>Data Profiling Overview</h3>
+                      <div class="tabcontent-sub-tab">
+                        <div class="table-container-table">
+                          <h6>Dataset statistics</h6>
+                          <ul>
+                              <li>
+                                  <span>Number of variables</span>
+                                  <span>5</span>
+                              </li>
+                              <li>
+                                  <span>Number of observations</span>
+                                  <span>150</span>
+                              </li>
+                              <li>
+                                  <span>Missing cells</span>
+                                  <span>0</span>
+                              </li>
+                              <li>
+                                  <span>Missing cells (%)</span>
+                                  <span>0.0%</span>
+                              </li>
+                              <li>
+                                  <span>Duplicate rows</span>
+                                  <span>2</span>
+                              </li>
+                              <li>
+                                  <span>Duplicate rows (%)</span>
+                                  <span>1.3%</span>
+                              </li>
+                              <li>
+                                  <span>Total size in memory</span>
+                                  <span>60 KiB</span>
+                              </li>
+                              <li>
+                                  <span>Average record size in memory</span>
+                                  <span>409 B</span>
+                              </li>
+                              <li>
+                                  <span>Number of variables</span>
+                                  <span>5</span>
+                              </li>
+                          </ul>
+                        </div>
+                        <div class="table-container-table">
+                          <h6>Variable types</h6>
+                          <ul>
+                              <li>
+                                  <span>Numeric</span>
+                                  <span>14</span>
+                              </li>
+                              <li>
+                                  <span>Categorical</span>
+                                  <span>14</span>
+                              </li>
+                          </ul>
+                        </div>
+                      </div>
+                  </div>
+                    <div id="data-understanding" class="tabcontent">
+                        <h3>Data Understanding</h3>
+                    </div>
+                    <div id="train-model" class="tabcontent">
+                        <h3>Train Model</h3>
+                    </div>
+                </div>
+            </div>
+          
+      </main>
+		</div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type='text/javascript'>
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace("active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+  </script>
+  <!-- <script type='text/javascript'>
+      jQuery(document).ready(function(){
+          $('#data').after('<div id="nav"></div>');
+          var rowsShown = 4;
+          var rowsTotal = $('#data tbody tr').length;
+          var numPages = rowsTotal/rowsShown;
+          for(i = 0;i < numPages;i++) {
+              var pageNum = i + 1;
+              $('#nav').append('<a href="#" rel="'+i+'">'+pageNum+'</a> ');
+          }
+          $('#data tbody tr').hide();
+          $('#data tbody tr').addClass('show-table-row');
+          $('#data tbody tr').slice(0, rowsShown).show();
+          $('#nav a:first').addClass('active');
+          $('#nav a').bind('click', function(){
+
+              $('#nav a').removeClass('active');
+              $(this).addClass('active');
+              var currPage = $(this).attr('rel');
+              var startItem = currPage * rowsShown;
+              var endItem = startItem + rowsShown;
+              $('#data tbody tr').css('opacity','0.0').hide().slice(startItem, endItem).
+              css('display','table-row').animate({opacity:1}, 300);
+          });
+      });
+  </script> -->
+  <script type='text/javascript'>
+      jQuery(document).ready(function($) {
+          $(".action-url").click(function() {
+              window.location = $(this).data("href");
+          });
+      });
+  </script>
+  <script>
+    window.onscroll = function() {myFunction()};
+    
+    var navbar = document.getElementById("navbar-1");
+    var sticky = navbar.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+    </script>
+  </body>
+</html>

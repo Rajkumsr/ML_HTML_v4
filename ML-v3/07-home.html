@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+        <meta name="description" content="Expleo ML">
+        <meta name="keywords" content="Expelo ML">
+        <meta name="author" content="ncrypted">
+        <title>Expleo - Machine Learning</title>
+        <link rel="icon" href="images/favicon-1.png" sizes="192x192">
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+		<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+		<!-- <link rel="stylesheet" href="css/style.css"> -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="css/fonts/fonts.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="js/jquery.min.js"></script>
+        <link rel="stylesheet" href="./css/customCss.css">
+          
+    </head>
+
+    <body>
+        <header>
+            <a class="logo-section" href="javascript:void(0);" title="expleo machine learnig">
+                <img src="/images/expleo-ml-logo-v1.svg" alt="expleo" />
+            </a>
+            <ul class="navbar">
+                <li><a href="#home">About us</a></li>
+                <div class="dropdown">
+                    <li><a href="#products">Products</a></li>
+                    <div class="dropdown-content">
+                        <a href="#">Service 1</a>
+                        <a href="#">Service 2</a>
+                        <a href="#">Service 3</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <li><a href="#Learning">Learning</a></li>
+                    <div class="dropdown-content">
+                        <a href="#">Service 1</a>
+                        <a href="#">Service 2</a>
+                        <a href="#">Service 3</a>
+                    </div>
+                </div>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about" class="action-url" data-href="01-index.html"><span class="login-action">Logout</span></a></li>
+            </ul>
+        </header>
+
+        <main class="home-pg">  
+
+            <div class="div2">
+                <h3>What is no-code/low-code?</h3>
+                <p>A low code/no code platform is a software development platform that allows users to create applications with minimal or no coding required. 
+                    These platforms provide visual interfaces, drag-and-drop functionality, 
+                    and pre-built components that enable users to build applications through visual modeling and configuration rather than traditional coding.
+                </p>
+             </div>
+            
+            <div>
+                <h3>Why is it important?</h3>
+                <p>These platforms significantly reduce the time and effort required to build applications. 
+                    With visual interfaces, pre-built components, and drag-and-drop functionality, 
+                    users can quickly assemble and configure applications without writing extensive code.
+                    These platforms empower individuals across an organization to be actively involved in creating solutions 
+                    and drive digital transformation within their respective domains.
+                </p>
+             </div>  
+
+            <div>
+                <h3>How does it work?</h3>
+                <p>Instead of commands, no-code/low-code platforms have built-in functionality that enables users to start creating applications by drag-and-drop. 
+                    In contrast to coding approaches, no-code/low-code technologies offer an opportunity for users to concentrate on 
+                    the data science and much less on the lines of code. 
+                    The intuitive visual environment also enables business users with less technical skills to also build applications.
+                </p>
+            </div>
+            
+        </main>
+
+        <footer>
+            <div class="copyright">
+                <div class="container">
+                    <span>Copyright © Expleo 2023</span>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+
+    <script>
+        // JavaScript to close dropdown when clicking outside
+        window.addEventListener("click", function(event) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (!event.target.closest(".dropdown")) {
+              if (openDropdown.style.display === "block") {
+                openDropdown.style.display = "none";
+              }
+            }
+          }
+        });
+    </script>
